@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleanPro - Serviços Especializados em Limpeza e Ambiente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .page-section {
+            scroll-margin-top: 80px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-spa text-green-600 text-2xl mr-2"></i>
+                <span class="text-xl font-bold text-green-700">CleanPro</span>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-green-700 font-medium hover:text-green-500">Início</a>
+                <a href="#services" class="text-gray-700 font-medium hover:text-green-500">Serviços</a>
+                <a href="#about" class="text-gray-700 font-medium hover:text-green-500">Sobre</a>
+                <a href="#testimonials" class="text-gray-700 font-medium hover:text-green-500">Depoimentos</a>
+                <a href="#contact" class="text-gray-700 font-medium hover:text-green-500">Contato</a>
+            </nav>
+            
+            <div class="hidden md:block">
+                <a href="#contact" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition duration-300">Solicitar Orçamento</a>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="text-green-700 font-medium">Início</a>
+                <a href="#services" class="text-gray-700 font-medium">Serviços</a>
+                <a href="#about" class="text-gray-700 font-medium">Sobre</a>
+                <a href="#testimonials" class="text-gray-700 font-medium">Depoimentos</a>
+                <a href="#contact" class="text-gray-700 font-medium">Contato</a>
+                <a href="#contact" class="bg-green-600 text-white px-4 py-2 rounded-lg text-center">Solicitar Orçamento</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg pt-24 pb-32 text-white page-section">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Soluções Profissionais em Limpeza e Ambiente</h1>
+                <p class="text-xl mb-8">Oferecemos serviços especializados de limpeza para residências, empresas e indústrias, com foco na sustentabilidade e qualidade.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg text-center font-medium transition duration-300">Solicitar Orçamento</a>
+                    <a href="#services" class="bg-white hover:bg-gray-100 text-green-700 px-6 py-3 rounded-lg text-center font-medium transition duration-300">Nossos Serviços</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white page-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Nossos Serviços</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Oferecemos uma ampla gama de serviços de limpeza profissional para atender às suas necessidades específicas.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-48 bg-green-100 flex items-center justify-center">
+                        <i class="fas fa-building text-green-600 text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Limpeza Comercial</h3>
+                        <p class="text-gray-600 mb-4">Serviços de limpeza para escritórios, lojas e estabelecimentos comerciais, mantendo seu espaço impecável.</p>
+                        <a href="#" class="text-green-600 font-medium hover:text-green-700">Saiba mais <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-industry text-blue-600 text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Limpeza Industrial</h3>
+                        <p class="text-gray-600 mb-4">Soluções especializadas para ambientes industriais, garantindo segurança e conformidade com normas.</p>
+                        <a href="#" class="text-green-600 font-medium hover:text-green-700">Saiba mais <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <i class="fas fa-home text-purple-600 text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Limpeza Residencial</h3>
+                        <p class="text-gray-600 mb-4">Serviços completos para sua casa, incluindo limpeza geral, pós-obra e organização de ambientes.</p>
+                        <a href="#" class="text-green-600 font-medium hover:text-green-700">Saiba mais <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-48 bg-yellow-100 flex items-center justify-center">
+                        <i class="fas fa-leaf text-yellow-600 text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Consultoria Ambiental</h3>
+                        <p class="text-gray-600 mb-4">Assessoria para implementação de práticas sustentáveis e gestão de resíduos em sua empresa.</p>
+                        <a href="#" class="text-green-600 font-medium hover:text-green-700">Saiba mais <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-48 bg-red-100 flex items-center justify-center">
+                        <i class="fas fa-biohazard text-red-600 text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Limpeza Pós-Obra</h3>
+                        <p class="text-gray-600 mb-4">Remoção completa de resíduos de construção, deixando o ambiente pronto para uso.</p>
+                        <a href="#" class="text-green-600 font-medium hover:text-green-700">Saiba mais <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-48 bg-indigo-100 flex items-center justify-center">
+                        <i class="fas fa-recycle text-indigo-600 text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Gestão de Resíduos</h3>
+                        <p class="text-gray-600 mb-4">Soluções completas para coleta, separação e destinação correta de resíduos sólidos.</p>
+                        <a href="#" class="text-green-600 font-medium hover:text-green-700">Saiba mais <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-green-50 page-section">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Sobre a CleanPro</h2>
+                    <p class="text-gray-600 mb-4">Há mais de 15 anos no mercado, a CleanPro é referência em serviços especializados de limpeza e consultoria ambiental.</p>
+                    <p class="text-gray-600 mb-4">Nossa missão é proporcionar ambientes limpos, saudáveis e sustentáveis para nossos clientes, utilizando tecnologias avançadas e produtos ecologicamente corretos.</p>
+                    <p class="text-gray-600 mb-6">Contamos com uma equipe altamente qualificada e treinada para atender às mais diversas necessidades, desde residências até grandes complexos industriais.</p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-600 mr-2"></i>
+                            <span class="text-gray-700">Equipe Qualificada</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-600 mr-2"></i>
+                            <span class="text-gray-700">Produtos Ecológicos</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-600 mr-2"></i>
+                            <span class="text-gray-700">Tecnologia Avançada</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-600 mr-2"></i>
+                            <span class="text-gray-700">Atendimento 24h</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Nossos Valores</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-leaf text-green-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Sustentabilidade</h4>
+                                    <p class="text-gray-600">Priorizamos o uso de produtos e métodos que minimizam o impacto ambiental.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-award text-green-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Qualidade</h4>
+                                    <p class="text-gray-600">Comprometemo-nos com a excelência em todos os serviços prestados.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-users text-green-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Compromisso Social</h4>
+                                    <p class="text-gray-600">Valorizamos nossa equipe e contribuímos para o desenvolvimento da comunidade.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white page-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">O Que Nossos Clientes Dizem</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Confira alguns depoimentos de clientes satisfeitos com nossos serviços.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-200 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Roberto Silva</h4>
+                            <p class="text-gray-600 text-sm">Empresário</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Contratei a CleanPro para a limpeza pós-obra do meu novo escritório e fiquei impressionado com a qualidade do serviço. A equipe foi extremamente profissional e cuidadosa."</p>
+                    <div class="flex text-yellow-400 mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-200 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Mariana Costa</h4>
+                            <p class="text-gray-600 text-sm">Gerente de Facilities</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"A CleanPro é nossa parceira há mais de 3 anos. A qualidade do serviço de limpeza comercial é excelente e a equipe sempre muito atenciosa com nossas necessidades específicas."</p>
+                    <div class="flex text-yellow-400 mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-200 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Carlos Eduardo</h4>
+                            <p class="text-gray-600 text-sm">Diretor Industrial</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"A consultoria ambiental da CleanPro nos ajudou a implementar um programa de gestão de resíduos que reduziu nossos custos em 20%. Recomendo fortemente!"</p>
+                    <div class="flex text-yellow-400 mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-green-700 text-white page-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Entre em Contato</h2>
+            <p class="text-center max-w-2xl mx-auto mb-12">Solicite um orçamento ou tire suas dúvidas sobre nossos serviços. Nossa equipe está pronta para atendê-lo.</p>
+            
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block mb-2">Nome Completo</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-300" placeholder="Seu nome">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block mb-2">E-mail</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-300" placeholder="seu@email.com">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block mb-2">Telefone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-300" placeholder="(11) 99999-9999">
+                        </div>
+                        
+                        <div>
+                            <label for="service" class="block mb-2">Serviço de Interesse</label>
+                            <select id="service" class="w-full px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-300">
+                                <option value="">Selecione um serviço</option>
+                                <option value="comercial">Limpeza Comercial</option>
+                                <option value="industrial">Limpeza Industrial</option>
+                                <option value="residencial">Limpeza Residencial</option>
+                                <option value="pos-obra">Limpeza Pós-Obra</option>
+                                <option value="consultoria">Consultoria Ambiental</option>
+                                <option value="residuos">Gestão de Resíduos</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block mb-2">Mensagem</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-300" placeholder="Descreva sua necessidade..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-white text-green-700 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300">Enviar Mensagem</button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2 lg:pl-10">
+                    <div class="bg-green-800 rounded-lg p-6 h-full">
+                        <h3 class="text-xl font-bold mb-6">Informações de Contato</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-green-300 mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-bold">Endereço</h4>
+                                    <p class="text-green-100">Rua das Flores, 123 - Centro<br>São Paulo - SP, 01234-567</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-phone text-green-300 mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-bold">Telefone</h4>
+                                    <p class="text-green-100">(11) 3456-7890</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope text-green-300 mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-bold">E-mail</h4>
+                                    <p class="text-green-100">contato@cleanpro.com.br</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-clock text-green-300 mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-bold">Horário de Atendimento</h4>
+                                    <p class="text-green-100">Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 12h</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-4">Siga-nos nas Redes Sociais</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-green-700 hover:bg-green-600 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-green-700 hover:bg-green-600 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="bg-green-700 hover:bg-green-600 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="bg-green-700 hover:bg-green-600 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <i class="fas fa-spa text-green-400 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">CleanPro</span>
+                    </div>
+                    <p class="text-gray-400 mt-2">Serviços Especializados em Limpeza e Ambiente</p>
+                </div>
+                
+                <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 text-center md:text-left">
+                    <div>
+                        <h4 class="font-bold mb-2">Links Rápidos</h4>
+                        <ul class="text-gray-400 space-y-1">
+                            <li><a href="#home" class="hover:text-white">Início</a></li>
+                            <li><a href="#services" class="hover:text-white">Serviços</a></li>
+                            <li><a href="#about" class="hover:text-white">Sobre</a></li>
+                            <li><a href="#contact" class="hover:text-white">Contato</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold mb-2">Serviços</h4>
+                        <ul class="text-gray-400 space-y-1">
+                            <li><a href="#" class="hover:text-white">Limpeza Comercial</a></li>
+                            <li><a href="#" class="hover:text-white">Limpeza Industrial</a></li>
+                            <li><a href="#" class="hover:text-white">Consultoria Ambiental</a></li>
+                            <li><a href="#" class="hover:text-white">Gestão de Resíduos</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 CleanPro. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if(!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
