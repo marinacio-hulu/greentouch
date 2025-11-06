@@ -23,12 +23,15 @@ export default function Header() {
   useEffect(() => {
     const links = document.querySelectorAll('a[href^="#"]');
 
-    const handleSmoothScroll = (e) => {
+    const handleSmoothScroll = (e: Event) => {
       e.preventDefault();
-      const targetId = e.currentTarget.getAttribute('href');
-      if (targetId === '#') return;
+      const target = e.currentTarget as HTMLAnchorElement;
+      const targetId = target.getAttribute('href');
+
+      if (!targetId || targetId === '#') return;
+
       const targetElement = document.querySelector(targetId);
-      if (targetElement) {
+      if (targetElement instanceof HTMLElement) {
         window.scrollTo({
           top: targetElement.offsetTop - 80,
           behavior: 'smooth',
@@ -37,12 +40,18 @@ export default function Header() {
       }
     };
 
-    links.forEach((link) => link.addEventListener('click', handleSmoothScroll));
+    links.forEach((link) =>
+      link.addEventListener('click', handleSmoothScroll as EventListener)
+    );
+
     return () =>
       links.forEach((link) =>
-        link.removeEventListener('click', handleSmoothScroll)
+        link.removeEventListener('click', handleSmoothScroll as EventListener)
       );
   }, []);
+
+
+
 
   return (
     <header className="fixed w-full bg-white shadow-md z-50">
@@ -67,41 +76,37 @@ export default function Header() {
         <nav className="hidden md:flex space-x-8">
           <Link
             href="/"
-            className={`font-medium ${
-              pathname === '/'
+            className={`font-medium ${pathname === '/'
                 ? 'text-green-700 hover:text-green-500'
                 : 'text-gray-700 hover:text-green-500'
-            }`}
+              }`}
           >
             Início
           </Link>
           <Link
             href="/servicos"
-            className={`font-medium ${
-              pathname === '/servicos'
+            className={`font-medium ${pathname === '/servicos'
                 ? 'text-green-700 hover:text-green-500'
                 : 'text-gray-700 hover:text-green-500'
-            }`}
+              }`}
           >
             Serviços
           </Link>
           <Link
             href="/sobre"
-            className={`font-medium ${
-              pathname === '/sobre'
+            className={`font-medium ${pathname === '/sobre'
                 ? 'text-green-700 hover:text-green-500'
                 : 'text-gray-700 hover:text-green-500'
-            }`}
+              }`}
           >
             Sobre
           </Link>
           <Link
             href="/contacto"
-            className={`font-medium ${
-              pathname === '/contacto'
+            className={`font-medium ${pathname === '/contacto'
                 ? 'text-green-700 hover:text-green-500'
                 : 'text-gray-700 hover:text-green-500'
-            }`}
+              }`}
           >
             Contato
           </Link>
@@ -120,9 +125,8 @@ export default function Header() {
       {/* Menu mobile */}
       <div
         id="mobile-menu"
-        className={`md:hidden bg-white py-4 px-4 shadow-lg transition-all duration-300 ${
-          menuOpen ? 'block' : 'hidden'
-        }`}
+        className={`md:hidden bg-white py-4 px-4 shadow-lg transition-all duration-300 ${menuOpen ? 'block' : 'hidden'
+          }`}
       >
         <div className="flex flex-col space-y-4">
           <Link href="/" onClick={handleLinkClick} className="text-gray-700 font-medium">
